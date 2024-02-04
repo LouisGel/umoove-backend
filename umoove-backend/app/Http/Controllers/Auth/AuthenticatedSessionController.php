@@ -84,4 +84,16 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['error' => 'Invalid credentials'], 401);
         }
     }
+
+    public function find($id){
+        $user = User::find($id)->first();
+
+        return response()->json($user);
+    }
+
+    public function show($id){
+        $user = User::find($id)->first();
+
+        return \view('flex',['utilisateur' => $user]);
+    }
 }
