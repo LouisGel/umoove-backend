@@ -123,6 +123,8 @@
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/umoove-backend/storage/app" />
+      <excludeFolder url="file://$MODULE_DIR$/umoove-backend/storage/framework" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
