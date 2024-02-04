@@ -7,7 +7,6 @@
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/umoove-backend/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/umoove-backend/tests/Unit" isTestSource="true" />
@@ -28,6 +27,7 @@
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/guzzlehttp/uri-template" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/laravel/pint" />
       <excludeFolder url="file://$MODULE_DIR$/umoove-backend/vendor/laravel/prompts" />

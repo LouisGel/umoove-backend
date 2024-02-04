@@ -42,4 +42,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function movementTemp()
+    {
+        return $this->belongsTo(MovementTemp::class);
+    }
+
+    public function coupons()
+    {
+        return $this->hasMany(Coupon::class);
+    }
+
+    public function histories()
+    {
+        return $this->hasMany(History::class);
+    }
 }
