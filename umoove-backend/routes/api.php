@@ -32,9 +32,15 @@ Route::controller(\App\Http\Controllers\CouponController::class)->group(function
     Route::post('/buy', 'buy')->name('buyApi');
 });
 
-/*Route::controller(\App\Http\Controllers\ActivityController::class)-group(function() {
-    //Route::get('/activity', 'create')->name('activityApi');
+Route::controller(\App\Http\Controllers\ActivityController::class)->group(function() {
+    Route::get('/activities', 'list')->name('activityApi');
 });
+
+Route::controller(\App\Http\Controllers\HistoryController::class)->group(function() {
+    Route::post('/add', 'add')->name('historyApi');
+});
+
+/*
 
 
 
@@ -46,9 +52,7 @@ Route::controller(\App\Http\Controllers\EntrepriseController::class)-group(funct
     //Route::get('/entreprise', 'create')->name('entrepriseApi');
 });
 
-Route::controller(\App\Http\Controllers\HistoryController::class)-group(function() {
-    //Route::get('/history', 'create')->name('historyApi');
-});
+
 
 Route::controller(\App\Http\Controllers\MovementTempController::class)-group(function() {
     Route::get('/movementTemp', 'create')->name('movementTempApi');

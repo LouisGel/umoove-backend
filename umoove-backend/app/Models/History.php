@@ -9,6 +9,13 @@ class History extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "date_time",
+        "user_id",
+        "activity_id",
+        "nb_points"
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
