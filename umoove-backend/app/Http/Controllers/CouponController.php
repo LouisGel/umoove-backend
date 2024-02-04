@@ -19,4 +19,15 @@ class CouponController extends Controller
             ->get();
         return response()->json($coupons);
     }
+
+    public function list_all(){
+        $coupons = DB::query()
+            ->select('coupons.id', 'coupons.code', 'entreprises.name as entreprise_name', 'coupon_types.name', 'coupon_types.description', 'coupon_types.price', 'coupon_types.max' )
+            ->from('coupons')
+            ->join('coupon_types', 'coupons.coupon_type_id', '=', 'coupon_types.id')
+            ->join('entreprises', 'coupon_types.entreprise_id', '=', 'entreprises.id')
+            ->whereNotNull('coupons.date_used')
+            ->get();
+        return response()->json($coupons);
+    }
 }

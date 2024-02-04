@@ -28,6 +28,7 @@ Route::controller(\App\Http\Controllers\MovementTempController::class)->group(fu
 
 Route::controller(\App\Http\Controllers\CouponController::class)->group(function() {
     Route::get('/coupons/{id}', 'list')->name('couponApi');
+    Route::get('/coupons', 'list_all')->name('couponAllApi');
 });
 
 /*Route::controller(\App\Http\Controllers\ActivityController::class)-group(function() {
