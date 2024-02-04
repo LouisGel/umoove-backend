@@ -10,10 +10,10 @@ class Coupon extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'description',
-        'reward_per_km',
-        'max_speed',
+        'date_used',
+        'coupon_type_id',
+        'user_id',
+        'code',
     ];
 
     public function couponType()

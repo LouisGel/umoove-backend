@@ -15,7 +15,7 @@ class CouponsSeeder extends Seeder
     {
         DB::table('coupons')->insert([
             [
-                'date_used' => now(),
+                'date_used' => null,
                 'coupon_type_id' => 1, // Ensure this ID exists
                 'user_id' => 1, // Ensure this ID exists
                 'code' => 'UNIQUECODE123',
