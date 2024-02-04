@@ -11,14 +11,32 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name' => 'John Doe',
-            'firstname' => 'John',
-            'lastname' => 'Doe',
-            'email' => 'john.doe@exemple.com',
-            'points' => 100,
-            'password' => Hash::make('allo1234'),
-            'movement_temp_id' => 1, // Ensure this ID exists or set to `null`
-            // Assume `movement_temp_id` is nullable or set to an existing ID
+                'name' => 'John Doe',
+                'firstname' => 'John',
+                'lastname' => 'Doe',
+                'email' => 'john.doe@exemple.com',
+                'points' => 100,
+                'password' => Hash::make('allo1234'),
+                'movement_temp_id' => 1,
+        ]);
+
+        DB::table('users')->insert([
+                'name' => 'Admin Doe',
+                'firstname' => 'Admin',
+                'lastname' => 'Doe',
+                'email' => 'admin@admin.com',
+                'points' => 300,
+                'password' => Hash::make('allo1234'),
+        ]);
+
+        DB::table('users')->insert([
+                'name' => 'User Doe',
+                'firstname' => 'User',
+                'lastname' => 'Doe',
+                'email' => 'user@user.com',
+                'points' => 50,
+                'password' => Hash::make('allo1234'),
+
         ]);
     }
 }

@@ -16,11 +16,28 @@ class CouponsSeeder extends Seeder
         DB::table('coupons')->insert([
             [
                 'date_used' => null,
-                'coupon_type_id' => 1, // Ensure this ID exists
-                'user_id' => 1, // Ensure this ID exists
+                'coupon_type_id' => 1,
+                'user_id' => 1,
                 'code' => 'UNIQUECODE123',
             ],
-            // Add more as needed
+            [
+                'date_used' => null,
+                'coupon_type_id' => 2, // Ensure this ID exists
+                'user_id' => 1, // Ensure this ID exists
+                'code' => 'UNIQUECODE124',
+            ],
+            [
+                'date_used' => null,
+                'coupon_type_id' => 3, // Ensure this ID exists
+                'user_id' => 1, // Ensure this ID exists
+                'code' => 'FreeBusPass123',
+            ],
+            [
+                'date_used' => null,
+                'coupon_type_id' => 1, // Ensure this ID exists
+                'user_id' => 2, // Ensure this ID exists
+                'code' => 'UNIQUECODE1235',
+            ],
         ]);
     }
 }

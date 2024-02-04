@@ -14,8 +14,18 @@ class EntreprisesSeeder extends Seeder
     public function run(): void
     {
         DB::table('entreprises')->insert([
-            'name' => 'Sample Company',
-            'description' => 'A sample company description.',
+            [
+                'name' => 'Sample Company',
+                'description' => 'A sample company description.',
+            ],
+            [
+                'name' => 'IGA',
+                'description' => 'Compagnie d\'alimentation.',
+            ],
+            [
+                'name' => 'STS',
+                'description' => 'Société de transport de Sherbrooke.',
+            ],
         ]);
     }
 }

@@ -17,9 +17,28 @@ class ActivitiesSeeder extends Seeder
             [
                 'name' => 'Running',
                 'description' => 'Running activity',
-                'reward_per_km' => 10,
+                'reward_per_km' => 100,
                 'max_speed' => 15.5,
             ],
+            [
+                'name' => 'STS bus',
+                'description' => 'STS travel',
+                'reward_per_km' => 50,
+                'max_speed' => 30.5,
+            ],
+            [
+                'name' => 'STM bus',
+                'description' => 'STM travel',
+                'reward_per_km' => 60,
+                'max_speed' => 31.5,
+            ],
+            [
+                'name' => 'STM metro',
+                'description' => 'STM travel',
+                'reward_per_km' => 90,
+                'max_speed' => 60.5,
+            ],
+
             // Add more as needed
         ]);
     }

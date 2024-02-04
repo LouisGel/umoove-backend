@@ -20,6 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::controller(\App\Http\Controllers\Auth\AuthenticatedSessionController::class)->group(function() {
     Route::post('/login', 'loginApi')->name('loginApi');
+    Route::post('register', 'registerApi')->name('registerApi');
 });
 
 Route::controller(\App\Http\Controllers\MovementTempController::class)->group(function() {

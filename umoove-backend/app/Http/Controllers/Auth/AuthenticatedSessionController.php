@@ -64,4 +64,24 @@ class AuthenticatedSessionController extends Controller
             return response()->json(['error' => 'Invalid credentials'], 401);
         }
     }
+
+    public function registerApi(Request $request)
+    {
+        $infos = json_decode($request->getContent(), true);
+
+        try {
+            $user = User::create([
+                'name' => $infos['firstname'] . ' ' . $infos['lastname'],
+                'lastname' => $infos['lastname'],
+                'firstname' => $infos['firstname'],
+                'points' => 0,
+                'email' => $infos['email'],
+                'password' => Hash::make($infos['password']),
+            ]);
+
+            return response()->json($user);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Invalid credentials'], 401);
+        }
+    }
 }
