@@ -17,7 +17,7 @@ class CouponController extends Controller
             ->join('coupon_types', 'coupons.coupon_type_id', '=', 'coupon_types.id')
             ->join('entreprises', 'coupon_types.entreprise_id', '=', 'entreprises.id')
             ->where('coupons.user_id', '=', $id)
-            ->whereNotNull('coupons.date_used')
+            ->whereNull('coupons.date_used')
             ->get();
         return response()->json($coupons);
     }
@@ -33,7 +33,7 @@ class CouponController extends Controller
             ->from('coupons')
             ->join('coupon_types', 'coupons.coupon_type_id', '=', 'coupon_types.id')
             ->join('entreprises', 'coupon_types.entreprise_id', '=', 'entreprises.id')
-            ->whereNotNull('coupons.date_used')
+            ->whereNull('coupons.date_used')
             ->havingRaw(' (SELECT coupon_types.max - count(coupons.coupon_type_id) FROM coupons WHERE coupons.coupon_type_id = coupons.coupon_type_id) > 0')
             ->groupBy('coupons.coupon_type_id', 'entreprises.name', 'coupon_types.name', 'coupon_types.description', 'coupon_types.price', 'coupon_types.id', 'coupon_types.max')
             ->get();
@@ -53,11 +53,8 @@ class CouponController extends Controller
             'updated_at' => now(),
         ]);
 
-        return response()->json($coupon);
-
         $coupon->save();
-
-
+        
         return response()->json(['message' => 'Coupon bought']);
 
     }
